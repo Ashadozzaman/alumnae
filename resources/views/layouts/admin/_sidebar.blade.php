@@ -9,8 +9,8 @@
 
             <div class="mt-3">
 
-                <a href="#" class="text-dark font-weight-medium font-size-16">Patrick Becker</a>
-                <p class="text-body mt-1 mb-0 font-size-13">UI/UX Designer</p>
+                <a href="#" class="text-dark font-weight-medium font-size-16">{{auth()->user()->name}}</a>
+                <p class="text-body mt-1 mb-0 font-size-13">{{auth()->user()->name}}</p>
 
             </div>
         </div>
@@ -27,7 +27,7 @@
                         <span>Dashboard</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="index.html">Dashboard 1</a></li>
+                        <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                     </ul>
                 </li>
 
@@ -37,7 +37,7 @@
                         <span>User</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="">User List</a></li>
+                        <li><a href="{{route('admin.user.list')}}">User List</a></li>
                     </ul>
                 </li>
 
