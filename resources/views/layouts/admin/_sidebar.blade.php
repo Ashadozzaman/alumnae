@@ -34,32 +34,13 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-flip-horizontal"></i>
-                        <span>Manage Page</span>
+                        <span>User</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="">Page List</a></li>
+                        <li><a href="">User List</a></li>
                     </ul>
                 </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="mdi mdi-flip-horizontal"></i>
-                        <span>Manage Menu</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="">Menu List</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="mdi mdi-flip-horizontal"></i>
-                        <span>Layouts</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="layouts-horizontal.html">Horizontal</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
         <!-- Sidebar -->

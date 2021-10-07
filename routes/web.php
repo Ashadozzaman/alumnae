@@ -16,17 +16,15 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
+Auth::routes();  
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/login', [HomeController::class, 'admin_login']);
 
-Route::group(['as'=>'admin.','prefix' => 'admin','namespace'=>'Admin','middleware'=>['auth','admin']], function () {
-        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::group(['prefix' => 'admin','middleware'=>['admin','auth']], function () {
+        Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
 });
 
-Route::group(['as'=>'user.','prefix' => 'user','namespace'=>'User','middleware'=>['auth','user']], function () {
-        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::group(['prefix' => 'user','middleware'=>['user','auth']], function () {
+        Route::get('/dashboard', [App\Http\Controllers\User\DashboardController::class, 'index'])->name('user.dashboard');
 });
 

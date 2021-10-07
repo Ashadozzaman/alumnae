@@ -19,11 +19,5 @@ class Authenticate extends Middleware
             return route('login');
         }
 
-        // if (Auth::check() && Auth::user()->role_id == 1) {
-        //     return redirect()->route('admin.dashboard');
-        // }else if(Auth::check() && Auth::user()->role_id == 3){
-        //     return redirect()->route('user.dashboard');
-        // }
-
     }
 }
