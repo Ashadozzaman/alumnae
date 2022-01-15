@@ -18,22 +18,31 @@ class UsersTableSeeder extends Seeder
         
         DB::table('users')->insert([
             'role_id' => '1',
-            'name' => 'Admin',
+            'full_name' => 'Admin',
+            'user_name' => 'Admin',
             'email' => 'admin@gmail.com',
+            'phone_number' => '0987654321',
             'password' => bcrypt('admin'),
+            'passing_year' => 1972,
         ]);
         DB::table('users')->insert([
             'role_id' => '2',
-            'name' => 'Manager',
+            'full_name' => 'Manager',
+            'user_name' => 'Manager',
             'email' => 'manager@gmail.com',
+            'phone_number' => '0987654322',
             'password' => bcrypt('manager'),
+            'passing_year' => 1972,
         ]);
 
         DB::table('users')->insert([
             'role_id' => '3',
-            'name' => 'User',
+            'full_name' => 'User',
+            'user_name' => 'User',
             'email' => 'user@gmail.com',
+            'phone_number' => '0987654333',
             'password' => bcrypt('user'),
+            'passing_year' => 1972,
         ]);
 
     }

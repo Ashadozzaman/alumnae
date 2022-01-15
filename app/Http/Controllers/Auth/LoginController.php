@@ -50,11 +50,11 @@ class LoginController extends Controller
     public function login(Request $request){
         $input = $request->all();
         $this->validate($request,[
-            'email'   => 'required|email',
+            'user_name'   => 'required',
             'password'=> 'required',
         ]);
 
-        if (auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))) {
+        if (auth()->attempt(array('user_name' => $input['user_name'], 'password' => $input['password']))) {
             if (Auth::check() && Auth::user()->role_id == 1) {
                 return redirect()->route('admin.dashboard');
             }elseif(Auth::check() && Auth::user()->role_id == 3){
