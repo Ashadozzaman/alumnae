@@ -29,9 +29,11 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-
-                <h4 class="card-title">User List</h4>
-
+                <div class="user-title row">
+                    <h4 class="col-md-10">User List</h4>
+                    <a href="" class="btn btn-primary btn-sm col-md-2"><i class="fa fa-plus"></i>Add User</a>
+                </div>
+                <br>
                 <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
                         <tr>
