@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Year;
 class HomeController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -25,4 +25,19 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function alumnae_login(){
+        return view('auth.alumnae_login');
+    }
+    public function alumnae_signup(){
+        // for ($i=1972; $i < 2023 ; $i++) { 
+        //     $data['year'] = $i;
+        //     Year::create($data);
+        // }
+
+        $data['years'] = Year::get();
+        return view('auth.alumnae_signup',$data);
+        return view('auth.alumnae_signup');
+    }
+
 }

@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Second_sub_category extends Model
+class Year extends Model
 {
     use HasFactory;
-    protected $table = 'second_sub_categories';
+    protected $table = 'years';
     protected $fillable = [
-        'sub_category_id',
-        'second_sub_category_name',
+        'year',
     ];
 }

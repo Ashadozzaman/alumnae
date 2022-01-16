@@ -16,6 +16,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/alumnae/login', [App\Http\Controllers\HomeController::class, 'alumnae_login'])->name('alumnae_login.home');
+Route::get('/alumnae/registration', [App\Http\Controllers\HomeController::class, 'alumnae_signup'])->name('alumnae_signup.home');
 Auth::routes();  
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

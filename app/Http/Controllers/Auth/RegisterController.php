@@ -52,8 +52,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'full_name' => ['required', 'string', 'max:255'],
+            'user_name' => ['required', 'string', 'max:255'],
+            'permanent_address' => ['required', 'string', 'max:255'],
+            'phone_number' => ['required', 'string', 'max:255'],
+            'passing_year' => ['required', 'string', 'max:255'],
+            'email' => ['string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -67,10 +71,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'role_id' => 3,
-            'password' => Hash::make($data['password']),
+            'full_name'         => $data['full_name'],
+            'user_name'         => $data['user_name'],
+            'email'             => $data['email'],
+            'permanent_address' => $data['permanent_address'],
+            'phone_number'      => $data['phone_number'],
+            'passing_year'      => $data['passing_year'],
+            'permanent_address' => $data['permanent_address'],
+            'current_address'   => $data['current_address'],
+            'bio'               => $data['bio'],
+            'role_id'           => 3,
+            'password'          => Hash::make($data['password']),
         ]);
     }
 }

@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->integer('phone_number')->nullable();
             $table->string('current_address')->nullable();
             $table->string('permanent_address')->nullable();
+            $table->text('bio')->nullable();
             $table->integer('donate_amount')->default(0);
             $table->integer('paid_status')->default(0);
             $table->integer('status')->default(0);
