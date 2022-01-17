@@ -182,7 +182,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="useremail">Bio</label>
-                                                    <textarea class="form-control" name="bio" cols="3"></textarea>
+                                                    <textarea class="form-control" name="bio" rows="1"></textarea>
                                                 </div>
                                             </div>
                                         </div>
