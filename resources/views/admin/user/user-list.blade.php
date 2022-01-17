@@ -24,6 +24,7 @@
         </div>
     </div>
 </div>
+@include('_message')
 <!-- end page title -->
 <div class="row">
     <div class="col-12">
@@ -40,7 +41,9 @@
                             <th>No</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Role</th>
+                            <th>Phone</th>
+                            <th>Year</th>
+                            <th>Address</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -51,10 +54,13 @@
                             <td>{{$key+1}}</td>
                             <td>{{$user->full_name}}</td>
                             <td>{{$user->email}}</td>
-                            <td>{{$user->roles->role_name}}</td>
+                            <td>{{$user->phone_number}}</td>
+                            <td>{{$user->passing_year}}</td>
+                            <td>{{$user->permanent_address}}</td>
                             <td>
                             	<a href="{{ route('users.edit',$user->id)}}" class="fa fa-edit"></a>
-                            	<a href="" class="fa fa-trash"></a>
+                                <a href="" class="fa fa-trash"></a>
+                            	<a href="{{ route('users.show',$user->id)}}" class="fa fa-eye"></a>
                             </td>
                         </tr>
                         @endforeach

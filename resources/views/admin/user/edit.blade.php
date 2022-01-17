@@ -182,10 +182,16 @@
                                     <input type="file" class="form-control" name="image"  >
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="useremail">Designation</label>
+                                    <input type="text" class="form-control" name="designation" value="{{ old('designation',$user->designation) }}"  >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="useremail">Bio</label>
-                                    <textarea class="form-control" name="bio" rows="2">{{ old('bio',$user->bio) }}</textarea>
+                                    <textarea class="form-control" name="bio" rows="1">{{ old('bio',$user->bio) }}</textarea>
                                 </div>
                             </div>
                         </div>

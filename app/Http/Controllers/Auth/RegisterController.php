@@ -80,6 +80,7 @@ class RegisterController extends Controller
             'permanent_address' => $data['permanent_address'],
             'current_address'   => $data['current_address'],
             'bio'               => $data['bio'],
+            'designation'       => $data['designation'],
             'role_id'           => 3,
             'password'          => Hash::make($data['password']),
         ]);

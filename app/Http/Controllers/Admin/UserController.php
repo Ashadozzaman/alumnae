@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $data['users'] = User::get();
+        $data['users'] = User::where('role_id',3)->get();
         return view('admin.user.user-list',$data);
     }
 
@@ -49,7 +49,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['user']  = User::findOrFail($id);
+        return view('admin.user.show',$data);
     }
 
     /**
@@ -101,10 +102,10 @@ class UserController extends Controller
         $data['passing_year']      = $request->passing_year;
         $data['permanent_address'] = $request->permanent_address;
         $data['current_address']   = $request->current_address;
-        $data['bio']       = $request->full_name;
-        $data['role_id']   = 3;
+        $data['bio']               = $request->bio;
+        $data['designation']       = $request->designation;
         User::where('id',$id)->update($data);
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('success','User Update Successfully!!');
     }
 
     /**

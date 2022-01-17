@@ -97,7 +97,7 @@
                     <img src="{{asset('/')}}assets/admin/images/logo-sm.png" alt="" height="20">
                 </span>
                 <span class="logo-lg">
-                    <img src="{{asset('/')}}assets/admin/images/logo-dark.png" alt="" height="17">
+                    <img src="{{asset('/')}}assets/admin/images/logo50.jpg" alt="" height="17">
                 </span>
             </a>
 
@@ -106,7 +106,7 @@
                     <img src="{{asset('/')}}assets/admin/images/logo-sm.png" alt="" height="20">
                 </span>
                 <span class="logo-lg">
-                    <img src="{{asset('/')}}assets/admin/images/logo-light.png" alt="" height="19">
+                    <img src="{{asset('/')}}assets/admin/images/pnglogo.png" alt="" height="17">
                 </span>
             </a>
         </div>
