@@ -37,7 +37,6 @@ class HomeController extends Controller
 
         $data['years'] = Year::get();
         return view('auth.alumnae_signup',$data);
-        return view('auth.alumnae_signup');
     }
 
 }

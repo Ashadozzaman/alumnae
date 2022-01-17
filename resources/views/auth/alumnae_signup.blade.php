@@ -28,7 +28,7 @@
 
 <body>
     <div class="home-btn d-none d-sm-block">
-        <a href="index.html" class="text-dark"><i class="fas fa-home h2"></i></a>
+        <a href="{{url('/')}}" class="text-dark"><i class="fas fa-home h2"></i></a>
     </div>
     <div class="account-pages my-5 pt-sm-5">
         <div class="container">
@@ -40,7 +40,7 @@
                             <div class="position-relative">
                                 <h5 class="text-white font-size-20">Free Register</h5>
                                 <p class="text-white-50 mb-0">Alumnae Register</p>
-                                <a href="index.html" class="logo logo-admin mt-4">
+                                <a href="{{url('/')}}" class="logo logo-admin mt-4">
                                     <img src="{{asset('/')}}assets/admin/images/logo-sm-dark.png" alt="" height="30">
                                 </a>
                             </div>
@@ -48,7 +48,7 @@
                         <div class="card-body pt-5">
 
                             <div class="p-2">
-                                <form method="POST" action="{{ route('register') }}">
+                                <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                                 @csrf
                                     <div class="card">
                                         <div class="card-header">
@@ -181,8 +181,14 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
+                                                    <label for="useremail">Profile Image</label>
+                                                    <input type="file" class="form-control" name="image"  >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
                                                     <label for="useremail">Bio</label>
-                                                    <textarea class="form-control" name="bio" cols="3"></textarea>
+                                                    <textarea class="form-control" name="bio" rows="2"></textarea>
                                                 </div>
                                             </div>
                                         </div>
