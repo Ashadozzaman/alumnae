@@ -31,6 +31,8 @@ class User extends Authenticatable
         'donate_amount',
         'paid_status',
         'status',
+        'bio',
+        'image',
     ];
 
     /**

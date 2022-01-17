@@ -37,7 +37,7 @@
                         <span>User</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('admin.user.list')}}">User List</a></li>
+                        <li><a href="{{route('users.index')}}">User List</a></li>
                     </ul>
                 </li>
 

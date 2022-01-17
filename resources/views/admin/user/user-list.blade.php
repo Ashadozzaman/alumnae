@@ -49,11 +49,11 @@
                     	@foreach($users as $key=>$user)
                         <tr>
                             <td>{{$key+1}}</td>
-                            <td>{{$user->name}}</td>
+                            <td>{{$user->full_name}}</td>
                             <td>{{$user->email}}</td>
                             <td>{{$user->roles->role_name}}</td>
                             <td>
-                            	<a href="" class="fa fa-edit"></a>
+                            	<a href="{{ route('users.edit',$user->id)}}" class="fa fa-edit"></a>
                             	<a href="" class="fa fa-trash"></a>
                             </td>
                         </tr>
