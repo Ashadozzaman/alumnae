@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('role_id');
             $table->string('full_name');
             $table->string('user_name');
-            $table->string('email')->unique()->nullable();
+            $table->string('email')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('passing_year');
@@ -28,8 +28,8 @@ class CreateUsersTable extends Migration
             $table->text('bio')->nullable();
             $table->string('image')->nullable();
             $table->string('designation')->nullable();
-            $table->integer('donate_amount')->default(0);
-            $table->integer('paid_status')->default(0);
+            $table->integer('tiket_amount')->default(0);
+            $table->integer('tiket_status')->default(0);
             $table->integer('status')->default(0);
             $table->rememberToken();
             $table->timestamps();

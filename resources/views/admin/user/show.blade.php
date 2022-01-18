@@ -34,16 +34,15 @@
     <div class="col-md-3">
         <div class="card">
             <div class="card-body">
-                <div class="profile-widgets py-3">
+                <div class="profile-widgets py-4">
 
                     <div class="text-center">
                         <div class="">
                             @if($user->image)
-                            <img src="{{asset('/')}}images/user/{{$user->image}}" alt="" class="avatar-lg mx-auto img-thumbnail rounded-circle">
+                            <img src="{{asset('/')}}images/user/{{$user->image}}" alt="" class="avatar-lg mx-auto img-thumbnail rounded-circle " style="width:150px;height: 150px;">
                             @else
-                            <img src="{{asset('/')}}assets/admin/images/users/avatar-2.jpg" alt="" class="avatar-lg mx-auto img-thumbnail rounded-circle">
+                            <img src="{{asset('/')}}assets/admin/images/users/avatar-2.jpg" alt="" class="avatar-lg mx-auto img-thumbnail rounded-circle"  style="width:150px;height: 150px;">
                             @endif
-                            <div class="online-circle"><i class="fas fa-circle text-success"></i></div>
                         </div>
 
                         <div class="mt-3 ">
@@ -131,7 +130,7 @@
                 <div class="row align-items-center">
                     <div class="col-8">
                         <p class="mb-2">Passing Year</p>
-                        <h4 class="mb-0">{{$user->passing_year}}</h4>
+                        <h4 class="mb-0">{{$user->passing_year}} </h4>
                     </div>
                 </div>
             </div>
@@ -140,8 +139,8 @@
             <div class="card-body">
                 <div class="row align-items-center">
                     <div class="col-8">
-                        <p class="mb-2">Donation Amount</p>
-                        <h4 class="mb-0">00</h4>
+                        <p class="mb-2">Tiket Amount</p>
+                        <h4 class="mb-0">{{$user->tiket_amount}} ৳</h4>
                     </div>
                 </div>
             </div>
@@ -150,8 +149,12 @@
             <div class="card-body">
                 <div class="row align-items-center">
                     <div class="col-8">
-                        <p class="mb-2">Payment Status</p>
-                        <h4 class="mb-0">No</h4>
+                        <p class="mb-2">Tiket Status</p>
+                        @if($user->tiket_status == 0)
+                            <button class="btn btn-sm btn-danger">Pending</button>
+                        @else
+                            <button class="btn btn-sm btn-success">Done</button>
+                        @endif
                     </div>
                 </div>
             </div>

@@ -44,6 +44,7 @@
                             <th>Phone</th>
                             <th>Year</th>
                             <th>Address</th>
+                            <!-- <th>Tiket Status</th> -->
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -57,9 +58,18 @@
                             <td>{{$user->phone_number}}</td>
                             <td>{{$user->passing_year}}</td>
                             <td>{{$user->permanent_address}}</td>
+                            {{--<td>
+                                @if($user->tiket_status == 0)
+                                    <button class="btn btn-sm btn-danger">No</button>
+                                @else
+                                    <button class="btn btn-sm btn-success">Done</button>
+                                @endif
+                            </td>--}}
                             <td>
                             	<a href="{{ route('users.edit',$user->id)}}" class="fa fa-edit"></a>
-                                <a href="" class="fa fa-trash"></a>
+                                
+                                <a href="{{ route('users.destroy',$user->id)}}" class="fa fa-trash" onclick="return confirm('Are you sure you want to delete this item?')"></a>
+
                             	<a href="{{ route('users.show',$user->id)}}" class="fa fa-eye"></a>
                             </td>
                         </tr>

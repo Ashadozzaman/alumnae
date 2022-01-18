@@ -57,7 +57,6 @@ class RegisterController extends Controller
             'permanent_address' => ['required', 'string', 'max:255'],
             'phone_number' => ['required', 'string', 'max:255'],
             'passing_year' => ['required', 'string', 'max:255'],
-            'email' => ['string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -70,6 +69,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if ($data['image']) {
+            $image     = $data['image'];
+            $imageName = time().$image->getClientOriginalName();
+            $path = public_path('/images/user');
+            $image->move($path,$imageName);
+            $data['image'] = $imageName;
+        }else{
+            $data['image'] = NULL;
+        }
         return User::create([
             'full_name'         => $data['full_name'],
             'user_name'         => $data['user_name'],
@@ -82,6 +90,7 @@ class RegisterController extends Controller
             'bio'               => $data['bio'],
             'designation'       => $data['designation'],
             'role_id'           => 3,
+            'image'             => $data['image'],
             'password'          => Hash::make($data['password']),
         ]);
     }

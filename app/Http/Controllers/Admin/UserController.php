@@ -81,7 +81,6 @@ class UserController extends Controller
             'permanent_address' => ['required', 'string', 'max:255'],
             'phone_number' => ['required', 'string', 'max:255'],
             'passing_year' => ['required', 'string', 'max:255'],
-            'email' => ['string', 'email', 'max:255'],
             'password' => ['confirmed'],
         ]);
         if ($request->file('image')) {
@@ -116,6 +115,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd($id);
     }
 }
