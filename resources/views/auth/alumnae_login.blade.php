@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title> Login | Qovex - Responsive Bootstrap 4 Admin Dashboard</title>
+    <title> Login | Alumnae Fourm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -21,7 +21,7 @@
 
 <body>
     <div class="home-btn d-none d-sm-block">
-        <a href="index.html" class="text-dark"><i class="fas fa-home h2"></i></a>
+        <a href="{{url('/')}}" class="text-dark"><i class="fas fa-home h2"></i></a>
     </div>
     <div class="account-pages my-5 pt-sm-5">
         <div class="container">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="mt-5 text-center">
-                        <p>Don't have an account ? <a href="pages-register.html" class="font-weight-medium text-primary"> Signup now </a> </p>
+                        <p>Don't have an account ? <a href="{{route('alumnae_signup.home')}}" class="font-weight-medium text-primary"> Signup now </a> </p>
                         <p>Alumnae Registration Fourm</p>
                     </div>
 

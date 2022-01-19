@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Register | Qovex - Responsive Bootstrap 4 Admin Dashboard</title>
+    <title>Register |  Alumnae Fourm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -18,10 +18,10 @@
     <link href="{{ asset('assets/admin/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .notice{
-            background: #c8e3fb;
+            /*background: #c8e3fb;*/
             padding: 2px;
             border-radius: 4px;
-            font-weight: 600;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -84,7 +84,7 @@
 
                                             </div>
                                             <div class="col-md-12">
-                                                <p class="text-success notice">Email or Phone Number must be needed (ইমেল বা ফোন নম্বর অবশ্যই প্রয়োজন)</p>
+                                                <p class="text-danger notice">Email or Phone Number must be needed (ইমেল বা ফোন নম্বর অবশ্যই প্রয়োজন)</p>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
