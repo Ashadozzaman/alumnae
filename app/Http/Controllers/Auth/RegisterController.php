@@ -69,7 +69,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if ($data['image']) {
+        if (isset($data['image'])) {
             $image     = $data['image'];
             $imageName = time().$image->getClientOriginalName();
             $path = public_path('/images/user');

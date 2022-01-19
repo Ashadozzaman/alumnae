@@ -32,7 +32,7 @@
             <div class="card-body">
                 <div class="user-title row">
                     <h4 class="col-md-10">User List</h4>
-                    <a href="" class="btn btn-primary btn-sm col-md-2"><i class="fa fa-plus"></i>Add User</a>
+                    <a href="" class="btn btn-primary btn-sm ml-10"><i class="fa fa-plus"></i>Add User</a>
                 </div>
                 <br>
                 <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -67,10 +67,14 @@
                             </td>--}}
                             <td>
                             	<a href="{{ route('users.edit',$user->id)}}" class="fa fa-edit"></a>
-                                
-                                <a href="{{ route('users.destroy',$user->id)}}" class="fa fa-trash" onclick="return confirm('Are you sure you want to delete this item?')"></a>
 
-                            	<a href="{{ route('users.show',$user->id)}}" class="fa fa-eye"></a>
+                            	<a href="{{ route('users.show',$user->id)}}" class="fa fa-eye ml-1"></a>
+
+                                <form action="{{ route('users.destroy',$user->id)}}" method="post" style="float:right">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="fa fa-trash delete-button" onclick="return confirm('Are you sure you want to delete this item?')"></button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
@@ -81,6 +85,14 @@
     </div>
     <!-- end col -->
 </div>
+<style>
+    .delete-button{
+        border: none;
+        color: #6363cd;
+        background: none;
+        margin-right: 35px;
+    }
+</style>
 <!-- end row -->
 <!-- end row -->
 @endsection

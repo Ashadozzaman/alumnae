@@ -43,9 +43,9 @@
                                 <form class="form-horizontal"  method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="username">Email</label>
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                        @error('email')
+                                        <label for="username">Username</label>
+                                        <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus>
+                                        @error('user_name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -55,7 +55,6 @@
                                     <div class="form-group">
                                         <label for="userpassword">Password</label>
                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
