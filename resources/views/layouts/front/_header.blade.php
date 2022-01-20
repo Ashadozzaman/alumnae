@@ -6,7 +6,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="{{ route('home') }}" class="active">Home</a></li>
           <li><a href="pricing.html">Member</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
