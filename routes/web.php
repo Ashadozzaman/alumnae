@@ -22,7 +22,10 @@ Route::get('/alumnae/login', [App\Http\Controllers\HomeController::class, 'alumn
 Route::get('/alumnae/registration', [App\Http\Controllers\HomeController::class, 'alumnae_signup'])->name('alumnae_signup.home');
 Auth::routes();  
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/alumnae', [HomeController::class, 'alumnae'])->name('alumnae');
+Route::post('/send/message', [HomeController::class, 'message_send'])->name('message.send');
 
 Route::group(['prefix' => 'admin','middleware'=>['admin','auth']], function () {
         Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');

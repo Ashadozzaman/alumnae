@@ -7,9 +7,9 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="{{ route('home') }}" class="active">Home</a></li>
-          <li><a href="pricing.html">Member</a></li>
+          <li><a href="{{ route('alumnae') }}">Alumnae</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{{ route('contact') }}">Contact</a></li>
           @auth
               <li><a href="" class="getstarted">Get Tiket</a></li>
           @else
@@ -20,7 +20,13 @@
               @endif
           @endauth
           @auth
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown" style="margin-left:5px;">
+            <a class="logo" href="#">
+              @if(auth()->user()->image != NULL)
+                  <img src="{{asset('/')}}images/user/{{auth()->user()->image}}" alt="" style="border-radius: 50%;" ></a>
+              @else
+                  <img src="{{asset('/')}}images/avatar-1.jpg" alt="" style="border-radius: 50%;" ></a>
+              @endif
             <ul>
               <li><a href="about.html">About</a></li>
               <li><a href="team.html">Profile</a></li>
