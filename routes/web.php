@@ -24,6 +24,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/notices', [HomeController::class, 'notices'])->name('notices');
 Route::get('/alumnae', [HomeController::class, 'alumnae'])->name('alumnae');
 Route::post('/send/message', [HomeController::class, 'message_send'])->name('message.send');
 

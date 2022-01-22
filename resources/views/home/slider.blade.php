@@ -9,40 +9,40 @@
         <div class="carousel-item active" style="background-image: url({{asset('/')}}assets/front/img/slide/schoolCover.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>PKHAAAHS Alumnae</span></h2>
-              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              <h2 class="animate__animated animate__fadeInDown">সুবর্ণজয়ন্তী উদযাপন অনুষ্ঠানে সবাইকে স্বাগতম। </h2>
+              <p class="animate__animated animate__fadeInUp">সুবর্ণজয়ন্তী উদযাপন- পিলগিরী খারুল হাজী আব্বাছ আলী আদর্শ উচ্চ বিদ্যালয়</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Tiket</a>
             </div>
           </div>
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url({{asset('/')}}assets/front/img/slide/slide-2.jpg)">
+        <div class="carousel-item" style="background-image: url({{asset('/')}}assets/front/img/slide/schoolgp5.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h2 class="animate__animated animate__fadeInDown">জিপিএ-৫ প্রাপ্ত শিক্ষার্থীদের সম্বর্ধনা</h2>
+              <p class="animate__animated animate__fadeInUp">পিলগিরী খারুল হাজী আব্বাছ আলী আদর্শ উচ্চ বিদ্যালয়</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url({{asset('/')}}assets/front/img/slide/slide-3.jpg)">
+        <div class="carousel-item" style="background-image: url({{asset('/')}}assets/front/img/slide/50banner.png)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h2 class="animate__animated animate__fadeInDown">Wellcome to <span>Golden jubilee of <b>PKHAAAHS</b></span></h2>
+              <p class="animate__animated animate__fadeInUp">The celebrations began with a colourful cultural procession. Later, the school flag was unfurled by the school Allumnae.</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>
         </div>
         <!-- Slide 4 -->
-        <div class="carousel-item" style="background-image: url({{asset('/')}}assets/front/img/slide/slide-1.jpg)">
+        <div class="carousel-item" style="background-image: url({{asset('/')}}assets/front/img/slide/school.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>PKHAAAHS Alumnae</span></h2>
-              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>PKHAAAHS Student Alumnae</span></h2>
+              <p class="animate__animated animate__fadeInUp">পিলগিরী খারুল হাজী আব্বাছ আলী আদর্শ উচ্চ বিদ্যালয়</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>

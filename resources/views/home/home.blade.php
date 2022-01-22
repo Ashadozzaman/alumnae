@@ -11,23 +11,21 @@
       <div class="container">
         <div class="row content">
           <div class="col-lg-6">
-            <h2>Eum ipsam laborum deleniti velitena</h2>
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+            <!-- <h2>Eum ipsam laborum deleniti velitena</h2>
+            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3> -->
+            <img width="96%" src="{{asset('/')}}assets/front/img/slide/50yearbanner.jpg">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              It was a very special day for the whole school. It was the 50th anniversary of our school, it's been half a century of the foundation of the school. So it’s the celebration time. Everyone was very much excited. Many preparations were started even a year ago like preparation of banners, stage renovation painting the school and many more.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
+              <li><i class="ri-check-double-line"></i> Chief guest arrived, cut the cake and the events started.</li>
+              <li><i class="ri-check-double-line"></i> On the day of the event, everything was getting prepared, there was a dinner also on that same night.</li>
+              <li><i class="ri-check-double-line"></i>Then the cultural events started and all the students excitedly performed the program. </li>
             </ul>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              All the programs were well executed and performed. Then everyone proceeded to the dining hall and the dinner was very delicious. Then the guests return back to their homes and this is how the school celebrated the golden jubilee function.
             </p>
           </div>
         </div>
@@ -41,30 +39,6 @@
 
         <div class="row">
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{asset('/')}}assets/front/img/clients/client-1.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{asset('/')}}assets/front/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{asset('/')}}assets/front/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{asset('/')}}assets/front/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{asset('/')}}assets/front/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{asset('/')}}assets/front/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
         </div>
 
       </div>
@@ -75,46 +49,70 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-md-6">
-            <div class="icon-box">
-              <i class="bi bi-briefcase"></i>
-              <h4><a href="#">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          <div class="col-md-6 mb-3">
+            <div class="row">
+              <div class="col-md-3">
+                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
+              </div>
+              <div class="col-md-8">
+                <h4><a href="#">Headmaster</a></h4>
+                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-card-checklist"></i>
-              <h4><a href="#">Dolor Sitema</a></h4>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          <div class="col-md-6 mb-3">
+            <div class="row">
+              <div class="col-md-3">
+                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
+              </div>
+              <div class="col-md-8">
+                <h4><a href="#">Assistant Headmaster</a></h4>
+                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-bar-chart"></i>
-              <h4><a href="#">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          <div class="col-md-6 mb-3">
+            <div class="row">
+              <div class="col-md-3">
+                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo-female.jpg">
+              </div>
+              <div class="col-md-8">
+                <h4><a href="#">Successfull Alumni Speeches</a></h4>
+                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-binoculars"></i>
-              <h4><a href="#">Nemo Enim</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <div class="col-md-6 mb-3">
+            <div class="row">
+              <div class="col-md-3">
+                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
+              </div>
+              <div class="col-md-8">
+                <h4><a href="#">Successfull Alumni Speeches</a></h4>
+                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-brightness-high"></i>
-              <h4><a href="#">Magni Dolore</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          <div class="col-md-6 mb-3">
+            <div class="row">
+              <div class="col-md-3">
+                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
+              </div>
+              <div class="col-md-8">
+                <h4><a href="#">Alumni Speeches</a></h4>
+                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-calendar4-week"></i>
-              <h4><a href="#">Eiusmod Tempor</a></h4>
-              <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          <div class="col-md-6 mb-3">
+            <div class="row">
+              <div class="col-md-3">
+                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo-female.jpg">
+              </div>
+              <div class="col-md-8">
+                <h4><a href="#">Alumni Speeches</a></h4>
+                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
+              </div>
             </div>
           </div>
         </div>

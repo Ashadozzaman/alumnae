@@ -8,7 +8,7 @@
         <ul>
           <li><a href="{{ route('home') }}" class="active">Home</a></li>
           <li><a href="{{ route('alumnae') }}">Alumnae</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="{{ route('notices') }}">Notice</a></li>
           <li><a href="{{ route('contact') }}">Contact</a></li>
           @auth
               <li><a href="" class="getstarted">Get Tiket</a></li>

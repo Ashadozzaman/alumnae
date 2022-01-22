@@ -62,18 +62,18 @@
                                         @enderror
                                     </div>
 
-                                    <div class="custom-control custom-checkbox">
+                                    <!-- <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customControlInline">
                                         <label class="custom-control-label" for="customControlInline">Remember me</label>
-                                    </div>
+                                    </div> -->
 
                                     <div class="mt-3">
                                         <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log In</button>
                                     </div>
 
-                                    <div class="mt-4 text-center">
+                                    <!-- div class="mt-4 text-center">
                                         <a href="pages-recoverpw.html" class="text-muted"><i class="mdi mdi-lock mr-1"></i> Forgot your password?</a>
-                                    </div>
+                                    </div> -->
                                 </form>
                             </div>
 
