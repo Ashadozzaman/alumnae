@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\User\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,5 +37,7 @@ Route::group(['prefix' => 'admin','middleware'=>['admin','auth']], function () {
 
 Route::group(['prefix' => 'user','middleware'=>['user','auth']], function () {
         Route::get('/dashboard', [App\Http\Controllers\User\DashboardController::class, 'index'])->name('user.dashboard');
+        Route::get('/profile/{id}', [DashboardController::class, 'profile'])->name('profile_update');
+        Route::put('/profile/update/{id}', [DashboardController::class, 'profile_update'])->name('profile.details.update');
 });
 

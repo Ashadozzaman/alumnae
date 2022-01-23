@@ -23,13 +23,13 @@
           <li class="dropdown" style="margin-left:5px;">
             <a class="logo" href="#">
               @if(auth()->user()->image != NULL)
-                  <img src="{{asset('/')}}images/user/{{auth()->user()->image}}" alt="" style="border-radius: 50%;" ></a>
+                  <img src="{{asset('/')}}images/user/{{auth()->user()->image}}" alt="" style="border-radius: 50%;height: 40px;width: 40px;" ></a>
               @else
-                  <img src="{{asset('/')}}images/avatar-1.jpg" alt="" style="border-radius: 50%;" ></a>
+                  <img src="{{asset('/')}}images/avatar-1.jpg" alt="" style="border-radius: 50%;height: 40px;width: 40px;" ></a>
               @endif
             <ul>
               <li><a href="about.html">About</a></li>
-              <li><a href="team.html">Profile</a></li>
+              <li><a href="{{route('profile_update',auth()->user()->id)}}">Profile</a></li>
               <li>
                 <form class="dropdown-item" id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf

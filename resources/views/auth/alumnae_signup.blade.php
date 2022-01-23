@@ -39,7 +39,7 @@
                             <div class="bg-login-overlay"></div>
                             <div class="position-relative">
                                 <h5 class="text-white font-size-20">Free Register</h5>
-                                <p class="text-white-50 mb-0">Alumnae Register</p>
+                                <p class="text-white-50 mb-0">Alumnae Forum</p>
                                 <a href="{{url('/')}}" class="logo logo-admin mt-4">
                                     <img src="{{asset('/')}}assets/admin/images/logo-sm-dark.png" alt="" height="30">
                                 </a>
@@ -71,7 +71,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="useremail">Username<sup><b>*</b></sup></label>
+                                                    <label for="useremail">Username<sup><b>*</b></sup> <strong class="text-danger">(This name is used for login time)</strong></label>
                                                     
                                                     <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus>
 

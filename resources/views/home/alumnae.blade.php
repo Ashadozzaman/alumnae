@@ -31,8 +31,9 @@
 	              <div class="pic"><img src="{{asset('/')}}images/user/{{($value1['image'])?$value1['image']:'avatar-1.jpg'}}" class="img-fluid" alt=""></div>
 	              <div class="member-info">
 	                <h4>{{$value1['full_name']}}</h4>
-	                <span>{{$value1['phone_number']}}</span>
-	                <p>{{$value1['bio']}}</p>
+                  <span>{{$value1['phone_number']}}</span>
+	                <span>{{$value1['email']}}</span>
+	                <p>{{($value1['bio'])?$value1['bio']:'Bio'}}</p>
 	                <div class="social">
 	                  <a href=""><i class="ri-twitter-fill"></i></a>
 	                  <a href=""><i class="ri-facebook-fill"></i></a>

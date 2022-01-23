@@ -31,17 +31,7 @@
         <div class="carousel-item" style="background-image: url({{asset('/')}}assets/front/img/slide/50banner.png)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Wellcome to <span>Golden jubilee of <b>PKHAAAHS</b></span></h2>
-              <p class="animate__animated animate__fadeInUp">The celebrations began with a colourful cultural procession. Later, the school flag was unfurled by the school Allumnae.</p>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 4 -->
-        <div class="carousel-item" style="background-image: url({{asset('/')}}assets/front/img/slide/school.jpg)">
-          <div class="carousel-container">
-            <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>PKHAAAHS Student Alumnae</span></h2>
+              <h2 class="animate__animated animate__fadeInDown">পিলগিরী খারুল হাজী আব্বাছ আলী আদর্শ উচ্চ বিদ্যালয় এর সুবর্ণ জয়ন্তীতে স্বাগতম </h2>
               <p class="animate__animated animate__fadeInUp">পিলগিরী খারুল হাজী আব্বাছ আলী আদর্শ উচ্চ বিদ্যালয়</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>

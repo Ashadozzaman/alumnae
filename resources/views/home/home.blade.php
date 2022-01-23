@@ -45,74 +45,56 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="testimonials" class="testimonials">
       <div class="container">
-
         <div class="row">
-          <div class="col-md-6 mb-3">
-            <div class="row">
-              <div class="col-md-3">
-                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
-              </div>
-              <div class="col-md-8">
-                <h4><a href="#">Headmaster</a></h4>
-                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
-              </div>
+
+          <div class="col-lg-6">
+            <div class="testimonial-item">
+                <img class="testimonial-img" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
+              <h3>Saul Goodman</h3>
+              <h4>Headmaster</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                The principal announced two-three months beyond the event. Teachers and students started preparation for the program.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
             </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <div class="row">
-              <div class="col-md-3">
-                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
-              </div>
-              <div class="col-md-8">
-                <h4><a href="#">Assistant Headmaster</a></h4>
-                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
-              </div>
+          <div class="col-lg-6">
+            <div class="testimonial-item">
+                <img class="testimonial-img" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
+              <h3>Saul Goodman</h3>
+              <h4>Assistant Headmaster</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                The principal announced two-three months beyond the event. Teachers and students started preparation for the program.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
             </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <div class="row">
-              <div class="col-md-3">
-                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo-female.jpg">
-              </div>
-              <div class="col-md-8">
-                <h4><a href="#">Successfull Alumni Speeches</a></h4>
-                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
-              </div>
+          <div class="col-lg-6">
+            <div class="testimonial-item">
+                <img class="testimonial-img" src="{{asset('/')}}assets/front/img/testimonials/demo-female.jpg">
+              <h3>Saul Goodman</h3>
+              <h4>Successfull Alumni Speeches</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                The principal announced two-three months beyond the event. Teachers and students started preparation for the program.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
             </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <div class="row">
-              <div class="col-md-3">
-                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
-              </div>
-              <div class="col-md-8">
-                <h4><a href="#">Successfull Alumni Speeches</a></h4>
-                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <div class="row">
-              <div class="col-md-3">
-                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
-              </div>
-              <div class="col-md-8">
-                <h4><a href="#">Alumni Speeches</a></h4>
-                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <div class="row">
-              <div class="col-md-3">
-                <img width="95%" src="{{asset('/')}}assets/front/img/testimonials/demo-female.jpg">
-              </div>
-              <div class="col-md-8">
-                <h4><a href="#">Alumni Speeches</a></h4>
-                <p>The principal announced two-three months beyond the event. Teachers and students started preparation for the program.</p>
-              </div>
+          <div class="col-lg-6">
+            <div class="testimonial-item">
+                <img class="testimonial-img" src="{{asset('/')}}assets/front/img/testimonials/demo.png">
+              <h3>Saul Goodman</h3>
+              <h4>Successfull Alumni Speeches</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                The principal announced two-three months beyond the event. Teachers and students started preparation for the program.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
             </div>
           </div>
         </div>
