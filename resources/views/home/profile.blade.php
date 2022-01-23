@@ -21,6 +21,7 @@
     <!-- ======= Team Section ======= -->
     <section id="team" class="team ">
       <div class="container">
+        @include('_message')
         <div class="row">
 	          <div class="col-md-3 mb-3 text-center" style="font-family: bootstrap-icons;font-weight: bold;">
               <img src="{{asset('/')}}images/user/{{(auth()->user()->image)?auth()->user()->image:'avatar-1.jpg'}}" class="img-fluid w-100" alt="">
@@ -31,7 +32,7 @@
               <form action="{{route('profile.details.update',$user->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('put')
-                <div class="card">
+                <div class="card mb-2">
                     <div class="card-header">
                         <label>Required Information</label>
                     </div>
@@ -155,6 +156,24 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="useremail">Last Institution</label>
+                                <input type="text" class="form-control" name="last_institution" value="{{ old('last_institution',$user->last_institution) }}"  >
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="useremail">Current Job Place</label>
+                                <input type="text" class="form-control" name="current_job_place" value="{{ old('current_job_place',$user->current_job_place) }}"  >
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="useremail">Last Degree</label>
+                                <input type="text" class="form-control" name="last_degree" value="{{ old('last_degree',$user->last_degree) }}"  >
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
                             <div class="form-group">
                                 <label for="useremail">Bio</label>
                                 <textarea class="form-control" name="bio" rows="1">{{ old('bio',$user->bio) }}</textarea>

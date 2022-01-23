@@ -52,6 +52,9 @@ class DashboardController extends Controller
         $data['current_address']   = $request->current_address;
         $data['bio']               = $request->bio;
         $data['designation']       = $request->designation;
+        $data['last_institution']  = $request->last_institution;
+        $data['current_job_place'] = $request->current_job_place;
+        $data['last_degree']       = $request->last_degree;
         User::where('id',$id)->update($data);
         return redirect()->back()->with('success','Profile Update Successfully!!');
     }

@@ -27,6 +27,9 @@ class CreateUsersTable extends Migration
             $table->text('bio')->nullable();
             $table->string('image')->nullable();
             $table->string('designation')->nullable();
+            $table->string('last_institution')->nullable();
+            $table->string('current_job_place')->nullable();
+            $table->string('last_degree')->nullable();
             $table->integer('tiket_amount')->default(0);
             $table->integer('tiket_status')->default(0);
             $table->integer('status')->default(0);

@@ -34,6 +34,9 @@ class User extends Authenticatable
         'bio',
         'image',
         'designation',
+        'last_institution',
+        'current_job_place',
+        'last_degree',
     ];
 
     /**
