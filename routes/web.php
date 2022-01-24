@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\User\DashboardController;
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,7 @@ Route::group(['prefix' => 'admin','middleware'=>['admin','auth']], function () {
         Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
         Route::get('/user/list', [App\Http\Controllers\Admin\DashboardController::class, 'user_list'])->name('admin.user.list');
         Route::resource('users',UserController::class);
+        Route::resource('notice',NoticeController::class);
 });
 
 Route::group(['prefix' => 'user','middleware'=>['user','auth']], function () {

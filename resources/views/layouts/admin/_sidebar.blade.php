@@ -41,6 +41,12 @@
                     </ul>
                 </li>
 
+                <li>
+                    <a href="{{route('notice.index')}}" class="">
+                        <i class="mdi mdi-flip-horizontal"></i>
+                        <span>Notice</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

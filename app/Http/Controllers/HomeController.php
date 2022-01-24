@@ -7,6 +7,7 @@ use App\Models\Year;
 use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Notice;
 
 class HomeController extends Controller
 {
@@ -32,6 +33,11 @@ class HomeController extends Controller
     public function contact()
     {
         return view('home.contact');
+    }
+    public function notices()
+    {
+        $data['notices'] = Notice::ORDERBY('id','desc')->paginate(3);
+        return view('home.notice',$data);
     }
     public function alumnae()
     {
