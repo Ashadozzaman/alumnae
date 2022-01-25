@@ -136,27 +136,27 @@ class UserController extends Controller
         $name =  'Name: '.$user->full_name;
         $year =  'Passing Year: '.$user->passing_year;
         $phone_number =  'Phone Number: 0'.$user->phone_number;
-        $img->text($name, 6120, 600, function($font) {  
+        $img->text($name, 5420, 600, function($font) {  
             $font->file(public_path('assets/admin/fonts/Yagora.ttf'));  
             $font->size(110);  
             $font->color('#500770');  
-            $font->align('center');  
+            $font->align('left');  
             $font->valign('bottom');  
             $font->angle(0);     
         }); 
-        $img->text($year, 5855, 1060, function($font) {  
+        $img->text($year, 5420, 1060, function($font) {  
             $font->file(public_path('assets/admin/fonts/Yagora.ttf'));  
             $font->size(110);  
             $font->color('#500770');  
-            $font->align('center');  
+            $font->align('left');  
             $font->valign('bottom');  
             $font->angle(0);  
         }); 
-        $img->text($phone_number, 6082, 1485, function($font) {  
+        $img->text($phone_number, 5420, 1485, function($font) {  
             $font->file(public_path('assets/admin/fonts/Yagora.ttf'));  
             $font->size(110);  
             $font->color('#500770');  
-            $font->align('center');  
+            $font->align('left');  
             $font->valign('bottom');  
             $font->angle(0);  
         });   
