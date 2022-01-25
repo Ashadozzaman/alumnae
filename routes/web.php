@@ -34,6 +34,7 @@ Route::group(['prefix' => 'admin','middleware'=>['admin','auth']], function () {
         Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
         Route::get('/user/list', [App\Http\Controllers\Admin\DashboardController::class, 'user_list'])->name('admin.user.list');
         Route::resource('users',UserController::class);
+        Route::get('tiket/generate/{id}',[UserController::class,'tiket_generate'])->name('tiket.generate');
         Route::resource('notice',NoticeController::class);
 });
 

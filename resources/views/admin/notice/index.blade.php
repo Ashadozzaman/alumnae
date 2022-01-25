@@ -51,8 +51,8 @@
                     	@foreach($notices as $key=>$notice)
                         <tr>
                             <td>{{$key+1}}</td>
-                            <td>{{$notice->notice_title}}</td>
-                            <td>{{$notice->notice_description}}</td>
+                            <td>{{ Str::limit($notice->notice_title, 20) }}</td>
+                            <td>{{ Str::limit($notice->notice_description, 20) }}</td>
                             <td>
                                 <img src="{{asset('/')}}images/notices/{{$notice->notice_image}}" style="width: 80px;">
                             </td>
@@ -67,8 +67,6 @@
                             <td>
                                 <div class="d-flex">
                             	<a href="{{ route('notice.edit',$notice->id)}}" class="fa fa-edit" style="margin-right: 10px"></a>
-
-                            	<!-- <a href="{{ route('notice.show',$notice->id)}}" class="fa fa-eye ml-1"></a> -->
 
                                 <form action="{{ route('notice.destroy',$notice->id)}}" method="post">
                                     @csrf

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Year;
+use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
 {
@@ -126,5 +127,42 @@ class UserController extends Controller
         }
         $user->delete();
         return redirect()->route('users.index')->with('success','User Delete Successfully!!');
+    }
+    public function tiket_generate($id){
+
+        $user  = User::findOrFail($id);
+        ini_set('memory_limit', '-1');
+        $img = Image::make(public_path('images/tikets/primary_tiket.png')); 
+        $name =  'Name: '.$user->full_name;
+        $year =  'Passing Year: '.$user->passing_year;
+        $phone_number =  'Phone Number: 0'.$user->phone_number;
+        $img->text($name, 6120, 600, function($font) {  
+            $font->file(public_path('assets/admin/fonts/Yagora.ttf'));  
+            $font->size(110);  
+            $font->color('#500770');  
+            $font->align('center');  
+            $font->valign('bottom');  
+            $font->angle(0);     
+        }); 
+        $img->text($year, 5855, 1060, function($font) {  
+            $font->file(public_path('assets/admin/fonts/Yagora.ttf'));  
+            $font->size(110);  
+            $font->color('#500770');  
+            $font->align('center');  
+            $font->valign('bottom');  
+            $font->angle(0);  
+        }); 
+        $img->text($phone_number, 6082, 1485, function($font) {  
+            $font->file(public_path('assets/admin/fonts/Yagora.ttf'));  
+            $font->size(110);  
+            $font->color('#500770');  
+            $font->align('center');  
+            $font->valign('bottom');  
+            $font->angle(0);  
+        });   
+        $imageName = time().'_tiket.png';
+        $path      = public_path().'/images/tikets/'.$imageName;
+        $img->save($path);
+        return redirect()->back();
     }
 }

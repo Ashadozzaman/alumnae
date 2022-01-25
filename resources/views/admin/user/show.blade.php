@@ -155,6 +155,7 @@
                         @else
                             <button class="btn btn-sm btn-success">Done</button>
                         @endif
+                        <a href="{{route('tiket.generate',$user->id)}}" class="btn btn-sm btn-primary mt-2">Tiket Generate</a>
                     </div>
                 </div>
             </div>
