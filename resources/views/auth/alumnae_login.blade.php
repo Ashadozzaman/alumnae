@@ -32,9 +32,9 @@
                             <div class="bg-login-overlay"></div>
                             <div class="position-relative">
                                 <h5 class="text-white font-size-20">Welcome Back !</h5>
-                                <p class="text-white-50 mb-0">Sign in to continue to Admin.</p>
-                                <a href="index.html" class="logo logo-admin mt-4">
-                                    <img src="{{ ('assets/images/logo-sm-dark.png') }}" alt="" height="30">
+                                <p class="text-white-50 mb-0">Sign in to continue to Alumnae Site.</p>
+                                <a href="{{url('/')}}" class="logo logo-admin mt-4">
+                                    <img src="{{asset('/')}}assets/front/img/logo/pk.png" alt="" height="70">
                                 </a>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus>
+                                        <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus placeholder="username">
                                         @error('user_name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -54,7 +54,7 @@
 
                                     <div class="form-group">
                                         <label for="userpassword">Password</label>
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="password">
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>

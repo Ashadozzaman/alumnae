@@ -58,4 +58,8 @@ class DashboardController extends Controller
         User::where('id',$id)->update($data);
         return redirect()->back()->with('success','Profile Update Successfully!!');
     }
+
+    public function get_tiket(){
+        return view('home.get_tiket');
+    }
 }

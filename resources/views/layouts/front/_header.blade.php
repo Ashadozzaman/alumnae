@@ -2,7 +2,7 @@
 
       <!-- <h1 class="logo me-auto"><a href="index.html">PKHS ALUMNAE</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-       <a href="index.html" class="logo me-auto"><img src="{{asset('/')}}assets/front/img/logo/logo50y.jpg" alt="" ></a>
+       <a href="index.html" class="logo me-auto"><img src="{{asset('/')}}assets/front/img/logo/pk.png" alt="" ></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -11,7 +11,7 @@
           <li><a href="{{ route('notices') }}">Notice</a></li>
           <li><a href="{{ route('contact') }}">Contact</a></li>
           @auth
-              <li><a href="" class="getstarted">Get Tiket</a></li>
+              <li><a href="{{ route('get.tiket') }}" class="getstarted">Get Tiket</a></li>
           @else
               <li><a href="{{ route('alumnae_login.home') }}" class="getstarted">Login</a></li>
 

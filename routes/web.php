@@ -42,5 +42,7 @@ Route::group(['prefix' => 'user','middleware'=>['user','auth']], function () {
         Route::get('/dashboard', [App\Http\Controllers\User\DashboardController::class, 'index'])->name('user.dashboard');
         Route::get('/profile/{id}', [DashboardController::class, 'profile'])->name('profile_update');
         Route::put('/profile/update/{id}', [DashboardController::class, 'profile_update'])->name('profile.details.update');
+        Route::get('/get/tiket', [DashboardController::class, 'get_tiket'])->name('get.tiket');
+
 });
 

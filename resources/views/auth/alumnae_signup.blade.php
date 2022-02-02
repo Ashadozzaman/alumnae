@@ -41,7 +41,7 @@
                                 <h5 class="text-white font-size-20">Free Register</h5>
                                 <p class="text-white-50 mb-0">Alumnae Forum</p>
                                 <a href="{{url('/')}}" class="logo logo-admin mt-4">
-                                    <img src="{{asset('/')}}assets/admin/images/logo-sm-dark.png" alt="" height="30">
+                                    <img src="{{asset('/')}}assets/front/img/logo/pk.png" alt="" height="70">
                                 </a>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                                 <div class="form-group">
                                                     <label for="useremail">Full Name<sup><b>*</b></sup></label>
                                                     
-                                                    <input id="full_name" type="text" class="form-control @error('full_name') is-invalid @enderror" name="full_name" value="{{ old('full_name') }}" required autocomplete="full_name" autofocus>
+                                                    <input id="full_name" type="text" class="form-control @error('full_name') is-invalid @enderror" name="full_name" value="{{ old('full_name') }}" required autocomplete="full_name" autofocus placeholder="Full Name">
 
                                                     @error('full_name')
                                                         <span class="invalid-feedback" role="alert">
@@ -73,7 +73,7 @@
                                                 <div class="form-group">
                                                     <label for="useremail">Username<sup><b>*</b></sup> <strong class="text-danger">(This name is used for login time)</strong></label>
                                                     
-                                                    <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus>
+                                                    <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus placeholder="User Name">
 
                                                     @error('user_name')
                                                         <span class="invalid-feedback" role="alert">
@@ -84,15 +84,15 @@
 
                                             </div>
                                             <div class="col-md-12">
-                                                <p class="text-danger notice">Email or Phone Number must be needed (ইমেল বা ফোন নম্বর অবশ্যই প্রয়োজন)</p>
+                                                <p class="text-danger notice">Phone Number must be needed (ফোন নম্বর অবশ্যই প্রয়োজন)</p>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="useremail">Email</label>
+                                                    <label for="useremail">Phone Number<sup><b>*</b></sup></label>
                                                     
-                                                    <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" autofocus>
+                                                    <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus placeholder="Number">
 
-                                                    @error('email')
+                                                    @error('phone_number')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
@@ -102,11 +102,11 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="useremail">Phone Number</label>
+                                                    <label for="useremail">Email</label>
                                                     
-                                                    <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
+                                                    <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" autofocus placeholder="Email">
 
-                                                    @error('phone_number')
+                                                    @error('email')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
@@ -155,7 +155,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="useremail">Permanent Address <sup><b>*</b></sup></label>
-                                                     <input type="text" class="form-control @error('permanent_address') is-invalid @enderror" name="permanent_address" id="permanent_address" value="{{ old('permanent_address') }}"  >
+                                                     <input type="text" class="form-control @error('permanent_address') is-invalid @enderror" name="permanent_address" id="permanent_address" value="{{ old('permanent_address') }}"  placeholder="Address">
                                                     @error('permanent_address')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -223,7 +223,7 @@
                                         <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Register</button>
                                     </div>
                                     <div class="mt-4 text-center">
-                                        <p class="mb-0">By registering you agree to the Skote <a href="#" class="text-primary">Terms of Use</a></p>
+                                        <!-- <p class="mb-0">By registering you agree to the Skote <a href="#" class="text-primary">Terms of Use</a></p> -->
                                     </div>
                                 </form>
                             </div>
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                     <div class="mt-5 text-center">
-                        <p>Already have an account ? <a href="pages-login.html" class="font-weight-medium text-primary"> Login</a> </p>
+                        <p>Already have an account ? <a href="{{route('alumnae_login.home')}}" class="font-weight-medium text-primary"> Login</a> </p>
                         <p>© </p>
                     </div>
 
