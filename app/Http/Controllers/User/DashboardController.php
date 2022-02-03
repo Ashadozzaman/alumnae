@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Tiket;
 use App\Models\Year;
 
 class DashboardController extends Controller
@@ -60,6 +61,15 @@ class DashboardController extends Controller
     }
 
     public function get_tiket(){
-        return view('home.get_tiket');
+        $data['tiket'] = Tiket::where('user_id',auth()->user()->id)->first();
+        return view('home.get_tiket',$data);
+    }
+
+    public function tiket_submit(Request $request){
+        $data = $request->except('_token');
+        $data['user_id'] = auth()->user()->id;
+        $data['date'] = date('Y-m-d');
+        Tiket::create($data);
+        return redirect()->back()->with('success','User tiket payment send successfully');
     }
 }

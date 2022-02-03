@@ -19,6 +19,7 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
+            @include('_message')
         <div class="row mt-5">
           <div class="col-lg-4">
             <div class="info">
@@ -36,8 +37,8 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-          	@include('_message')
-            <form action="" method="post" >
+            @if(!$tiket)
+            <form action="{{route('tiket.submit')}}" method="post" >
               @csrf
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -50,13 +51,13 @@
               <div class="form-group mt-3">
                 <div>
                     <strong>Payment By:</strong>
-                    <label><input type="radio" name="colorRadio" value="cash">
+                    <label><input type="radio" name="payment_by" required value="cash">
                       Hand<img src="{{asset('/')}}assets/front/img/cashhand.png" width="50px" title="Cash on Hand">
                     </label>
-                    <label><input type="radio" name="colorRadio" value="bkash"> 
+                    <label><input type="radio" name="payment_by" required value="bkash"> 
                      <img src="{{asset('/')}}assets/front/img/cashbkash.svg" width="50px">
                     </label>
-                    <label><input type="radio" name="colorRadio" value="bank">
+                    <label><input type="radio" name="payment_by" required value="bank">
                      Bank<img src="{{asset('/')}}assets/front/img/cashbank.jpg" width="50px"></label>
                 </div>
               </div>
@@ -68,6 +69,7 @@
               <div class="my-3">
                 <div class="payment cash">
                   <label><b>Cash on Hand Payment</b></label>
+                  <hr>
                   <div class="row ">
                     <div class="col-md-6 form-group mt-3">
                       <input type="text" class="form-control" name="paymet_reciver_name" placeholder="Please enter payment reciver name">
@@ -78,7 +80,8 @@
                   </div>
                 </div>
                 <div class="payment bkash">
-                  <label><b>Bkash Payment</b></label><br>
+                  <label><b>Bkash Payment</b></label>
+                  <hr>
                   <label>Please send your amount in this number 0180000000</label>
                   <div class="row ">
                     <div class="col-md-6 form-group  mt-3">
@@ -91,19 +94,39 @@
                 </div>
                 <div class="payment bank">
                   <label><b>Bank Payment</b></label>
+                  <hr>
+                  <label><b>Bank Name:</b> Islamia Bank</label><br>
+                  <label><b>Bank ID:</b> 333 222 111</label>
+
                   <div class="row ">
                     <div class="col-md-6 form-group  mt-3">
                       <input type="text" class="form-control" name="bank_transaction_id" placeholder="Please enter bank transaction id">
                     </div>
                     <div class="col-md-6 form-group mt-3">
-                      <input type="text" class="form-control" name="paymet_reciver_name" placeholder="Please enter bank name">
+                      <input type="text" class="form-control" name="bank_name" placeholder="Please enter bank name">
                     </div>
                   </div>
                 </div>
               </div>
               <div><button class="btn btn-success pt-2 mt-3" type="submit">SEND</button></div>
             </form>
-
+            @else
+              @if($tiket->status == 0)
+              <ul>
+                <li>
+                  <strong class="text-danger">Hi, {{auth()->user()->full_name}}</strong> <b>Thanks for purchasing ticket</b>
+                </li>
+                <li>
+                  <b>Please wait 24 hours for admin confirmation after that you are able to download the ticket !!</b>
+                </li>
+                <li>
+                  <strong class="text-danger">For Urgent</strong><b> Please contact with whatsapp (0123456711, 01981234511)</b>
+                </li>
+              </ul>
+              @else
+              <a href="#" class="btn btn-success"> Download Tiket</a>
+              @endif
+            @endif
           </div>
 
         </div>
