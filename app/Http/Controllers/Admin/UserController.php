@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Year;
 use Intervention\Image\Facades\Image;
-
+use App\Models\Tiket;
+use File;
+use Response;
 class UserController extends Controller
 {
     /**
@@ -160,9 +162,36 @@ class UserController extends Controller
             $font->valign('bottom');  
             $font->angle(0);  
         });   
-        $imageName = time().'_tiket.png';
-        $path      = public_path().'/images/tikets/'.$imageName;
+        $imageName = $user->user_name.time().'_tiket.png';
+        $path      = public_path().'/images/tikets/user/'.$imageName;
         $img->save($path);
-        return redirect()->back();
+        return $imageName;
+    }
+
+
+    public function tiket_list(){
+        $data['tikets'] = Tiket::ORDERBY('id','DESC')->get();
+        return view('admin.user.tiket-list',$data);
+    }
+
+    public function tiket_approved($id){
+       $tiket = Tiket::findOrFail($id);
+       $user  = User::findOrFail($tiket->user_id);
+       $image = $this->tiket_generate($tiket->user_id);
+       $udata['tiket_status'] = 1;
+       $udata['tiket_amount'] = $tiket->amount;
+       $tdata['status'] = 1;
+       $tdata['tiket_image'] = $image;
+       $tiket->update($tdata);
+       $user->update($udata);
+       return back()->with("success","Tiket Approved");
+    }
+
+    public function tiket_download($id){
+       $tiket = Tiket::findOrFail($id);
+       $image = $tiket->tiket_image;
+       $path  = public_path().'/images/tikets/user/'.$image;
+       // dd($path);
+       return Response::download($path); 
     }
 }

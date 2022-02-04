@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+
 
 class Tiket extends Model
 {
@@ -21,5 +23,10 @@ class Tiket extends Model
         'bank_name',
         'date',
         'status',
+        'tiket_image',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class,'user_id');
+    }
 }

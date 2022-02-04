@@ -47,6 +47,13 @@
                         <span>Notice</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="{{route('tiket.list')}}" class="">
+                        <i class="mdi mdi-flip-horizontal"></i>
+                        <span>Tiket</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

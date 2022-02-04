@@ -26,6 +26,7 @@ class CreateTiketsTable extends Migration
             $table->string('bank_name')->nullable();
             $table->string('date');
             $table->string('status')->default(0);
+            $table->string('tiket_image')->nullable();
             $table->timestamps();
         });
     }

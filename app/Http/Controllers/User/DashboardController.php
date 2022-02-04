@@ -15,6 +15,9 @@ class DashboardController extends Controller
     }
 
     public function profile($id){
+        if ($id != auth()->user()->id) {
+            return back();
+        }
         $data['user'] = User::findOrFail($id);
         $data['years'] = Year::get();
         return view('home.profile',$data);
