@@ -153,7 +153,7 @@
                         @if($user->tiket_status == 0)
                             <button class="btn btn-sm btn-danger">Pending</button>
                         @else
-                        <a href="" class="btn btn-warning btn-sm">Download</a>
+                        <a href="{{route('tiket.download',$tiket->id)}}" class="btn btn-warning btn-sm">Download</a>
                         @endif
                         {{--<a href="{{route('tiket.generate',$user->id)}}" class="btn btn-sm btn-primary mt-2">Tiket Generate</a>--}}
                     </div>

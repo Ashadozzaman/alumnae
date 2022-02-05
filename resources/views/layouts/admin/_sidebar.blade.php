@@ -51,7 +51,7 @@
                 <li>
                     <a href="{{route('tiket.list')}}" class="">
                         <i class="mdi mdi-flip-horizontal"></i>
-                        <span>Tiket</span>
+                        <span>Tiket <span class="badge badge-success">{{$tiket}}</span></span>
                     </a>
                 </li>
             </ul>

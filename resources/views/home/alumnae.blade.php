@@ -24,22 +24,18 @@
 
         @foreach($users_array as $key => $value)
         <div class="row">
-        	<h4> Passing Year: {{$value['passing_year']}}</h4>
+        	<h6> <b>Passing Year: {{$value['passing_year']}}</b></h6>
+          <hr>
         	@foreach($value['users_year_wise'] as $key1 => $value1)
-	          <div class="col-lg-6">
-	            <div class="member d-flex align-items-start">
-	              <div class="pic"><img src="{{asset('/')}}images/user/{{($value1['image'])?$value1['image']:'avatar-1.jpg'}}" class="img-fluid" alt=""></div>
-	              <div class="member-info">
-	                <h4>{{$value1['full_name']}}</h4>
-                  <span>{{$value1['phone_number']}}</span>
+	          <div class="col-lg-2 text-center">
+	            <div class="member_profile">
+	              <div class="pic">
+                  <img src="{{asset('/')}}images/user/{{($value1['image'])?$value1['image']:'avatar-1.jpg'}}" class="img-fluid" alt="">
+                </div>
+	              <div class="details" >
+	                <strong>{{$value1['full_name']}}</strong><br>
+                  <!-- <span>{{$value1['phone_number']}}</span> -->
 	                <span>{{$value1['email']}}</span>
-	                <p>{{($value1['bio'])?$value1['bio']:'Bio'}}</p>
-	                <div class="social">
-	                  <a href=""><i class="ri-twitter-fill"></i></a>
-	                  <a href=""><i class="ri-facebook-fill"></i></a>
-	                  <a href=""><i class="ri-instagram-fill"></i></a>
-	                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-	                </div>
 	              </div>
 	            </div>
 	          </div>
@@ -51,4 +47,16 @@
     </section><!-- End Team Section -->
 
   </main><!-- End #main -->
+  <style type="text/css">
+    .member_profile{
+      box-shadow: 0px 2px 15px rgb(85 98 112 / 8%);
+      padding: 13px;
+      border-radius: 5px;
+      background: ##fbf1f1;
+      margin-bottom: 5px;
+    }
+    .member_profile .details{
+      font-size: 12px;
+    }
+  </style>
 @endsection

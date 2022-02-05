@@ -33,6 +33,12 @@
                 <h4>Phone</h4>
                 <p>{{auth()->user()->phone_number}}</p>
               </div>
+
+              <div class="p-2 mt-3">
+                <!-- @if($tiket->status == 1)
+                <a href="{{route('user.tiket.download',$tiket->id)}}" class="btn btn-success float-right"> Download Tiket</a>
+                @endif -->
+              </div>
             </div>
           </div>
 
@@ -120,11 +126,15 @@
                   <b>Please wait 24 hours for admin confirmation after that you are able to download the ticket !!</b>
                 </li>
                 <li>
-                  <strong class="text-danger">For Urgent</strong><b> Please contact with whatsapp (0123456711, 01981234511)</b>
+                  <strong class="text-danger">For Urgent</strong><b> Please contact with Karim, Rahim via whatsapp (0123456711, 01981234511)</b>
                 </li>
               </ul>
               @else
-              <a href="#" class="btn btn-success"> Download Tiket</a>
+              <div class="mb-2">
+                <a href="{{route('user.tiket.download',$tiket->id)}}">
+                <img src="{{asset('/')}}/images/tikets/user/{{$tiket->tiket_image}}" width="100%"></a>
+              </div>
+              <a href="{{route('user.tiket.download',$tiket->id)}}" class="btn btn-danger float-right"> Download Tiket</a>
               @endif
             @endif
           </div>

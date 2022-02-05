@@ -83,7 +83,7 @@
                             <td>
                                 @if($tiket->status == 0)
                                 <a href="{{route('tiket.approved',$tiket->id)}}" class="btn btn-primary btn-sm">Approved</a>
-                                <a href="{{route('tiket.approved',$tiket->id)}}" class="btn btn-warning btn-sm">Reject</a>
+                                <a href="{{route('tiket.reject',$tiket->id)}}" class="btn btn-warning btn-sm">Reject</a>
                                 @elseif($tiket->status == 1)
                                 <!-- <button class="btn btn-success btn-sm">Done</button> -->
                                 <a href="{{route('tiket.download',$tiket->id)}}" class="btn btn-warning btn-sm">Download</a>

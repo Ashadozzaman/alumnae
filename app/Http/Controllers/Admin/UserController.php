@@ -53,6 +53,7 @@ class UserController extends Controller
     public function show($id)
     {
         $data['user']  = User::findOrFail($id);
+        $data['tiket'] = Tiket::where('user_id',$id)->first();
         return view('admin.user.show',$data);
     }
 
@@ -191,7 +192,15 @@ class UserController extends Controller
        $tiket = Tiket::findOrFail($id);
        $image = $tiket->tiket_image;
        $path  = public_path().'/images/tikets/user/'.$image;
-       // dd($path);
        return Response::download($path); 
     }
+
+    public function tiket_reject($id){
+       $tiket = Tiket::findOrFail($id);
+       $tiket->delete();
+       return back()->with("error","Tiket Rejected");
+    }
+
+
+
 }

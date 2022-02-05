@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Tiket;
 use App\Models\Year;
+use File;
+use Response;
 
 class DashboardController extends Controller
 {
@@ -42,7 +44,7 @@ class DashboardController extends Controller
             $data['image'] = $imageName;
             
             $path=public_path().'/images/user/'.$user->image;
-            if (file_exists($path)) {
+            if (file_exists($path) && $user->image != null) {
                 unlink($path);
             }
         }
@@ -74,5 +76,13 @@ class DashboardController extends Controller
         $data['date'] = date('Y-m-d');
         Tiket::create($data);
         return redirect()->back()->with('success','User tiket payment send successfully');
+    }
+
+    public function tiket_download($id){
+       $tiket = Tiket::findOrFail($id);
+       $image = $tiket->tiket_image;
+       $path  = public_path().'/images/tikets/user/'.$image;
+       // dd($path);
+       return Response::download($path); 
     }
 }

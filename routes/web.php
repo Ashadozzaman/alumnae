@@ -38,6 +38,7 @@ Route::group(['prefix' => 'admin','middleware'=>['admin','auth']], function () {
         Route::get('tiket/generate/{id}',[UserController::class,'tiket_generate'])->name('tiket.generate');
         Route::get('tiket/approved/{id}',[UserController::class,'tiket_approved'])->name('tiket.approved');
         Route::get('tiket/download/{id}',[UserController::class,'tiket_download'])->name('tiket.download');
+        Route::get('tiket/reject/{id}',[UserController::class,'tiket_reject'])->name('tiket.reject');
         Route::resource('notice',NoticeController::class);
 });
 
@@ -47,6 +48,7 @@ Route::group(['prefix' => 'user','middleware'=>['user','auth']], function () {
         Route::put('/profile/update/{id}', [DashboardController::class, 'profile_update'])->name('profile.details.update');
         Route::get('/get/tiket', [DashboardController::class, 'get_tiket'])->name('get.tiket');
         Route::post('/tiket/submit', [DashboardController::class, 'tiket_submit'])->name('tiket.submit');
+        Route::get('/user/tiket/download/{id}',[DashboardController::class,'tiket_download'])->name('user.tiket.download');
 
 });
 
